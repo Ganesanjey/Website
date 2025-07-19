@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPN Tool - GVSystems</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .app-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .app-features {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #2563eb, #3b82f6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .feature-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .download-section {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .download-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .download-card {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .download-card:hover {
+            border-color: #2563eb;
+            transform: translateY(-5px);
+        }
+        
+        .download-card h3 {
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+        
+        .download-btn {
+            background: #2563eb;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+        
+        .security-section {
+            padding: 80px 0;
+            background: #1e293b;
+            color: white;
+        }
+        
+        .security-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .security-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+        
+        .security-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #10b981, #34d399);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .security-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .server-locations {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+        
+        .location-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .location-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .location-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        .location-card h4 {
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+        
+        .location-card p {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>GVSystems</h2>
+                <span>Pvt Ltd</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#services" class="nav-link">Services</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Apps <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="remote-desktop.html">Remote Desktop</a></li>
+                        <li><a href="vpn-tool.html">VPN Tool</a></li>
+                        <li><a href="file-sharing.html">File Sharing</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- App Hero Section -->
+    <section class="app-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1><i class="fas fa-shield-alt"></i> VPN Tool</h1>
+                <p>Enterprise-grade VPN solution with military-grade encryption, global server network, and zero-logs policy. Secure your internet connection and protect your privacy.</p>
+                <div class="hero-buttons">
+                    <a href="#download" class="btn btn-primary">Download Now</a>
+                    <a href="#features" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="app-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Key Features</h2>
+                <p>Advanced VPN solution with enterprise-grade security</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Military-Grade Encryption</h3>
+                    <p>AES-256 encryption with perfect forward secrecy to ensure your data remains secure and private at all times.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Global Server Network</h3>
+                    <p>Access to 1000+ servers across 60+ countries for optimal speed and location flexibility.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-eye-slash"></i>
+                    </div>
+                    <h3>Zero-Logs Policy</h3>
+                    <p>We don't track, collect, or share any of your personal data. Your privacy is our priority.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>High-Speed Connections</h3>
+                    <p>Optimized servers and protocols for maximum speed without compromising security.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Cross-Platform Support</h3>
+                    <p>Available for Windows, macOS, Linux, iOS, Android, and routers with easy setup.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h3>Kill Switch</h3>
+                    <p>Automatic internet disconnection if VPN connection drops to prevent data leaks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="security-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: white;">Security Features</h2>
+                <p style="color: #cbd5e1;">Advanced security protocols to protect your online activities</p>
+            </div>
+            <div class="security-grid">
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>AES-256 Encryption</h3>
+                    <p>Industry-standard encryption used by governments and financial institutions worldwide.</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="fas fa-random"></i>
+                    </div>
+                    <h3>Perfect Forward Secrecy</h3>
+                    <p>Each session uses unique encryption keys, ensuring past sessions remain secure even if compromised.</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <h3>DNS Leak Protection</h3>
+                    <p>Prevents DNS queries from bypassing the VPN tunnel and revealing your real location.</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Multiple Protocols</h3>
+                    <p>Support for OpenVPN, WireGuard, and IKEv2 protocols for maximum compatibility and security.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Server Locations -->
+    <section class="server-locations">
+        <div class="container">
+            <div class="section-header">
+                <h2>Global Server Network</h2>
+                <p>Access servers in 60+ countries for optimal performance and location flexibility</p>
+            </div>
+            <div class="location-grid">
+                <div class="location-card">
+                    <h4>United States</h4>
+                    <p>15+ Locations</p>
+                </div>
+                <div class="location-card">
+                    <h4>United Kingdom</h4>
+                    <p>5+ Locations</p>
+                </div>
+                <div class="location-card">
+                    <h4>Germany</h4>
+                    <p>8+ Locations</p>
+                </div>
+                <div class="location-card">
+                    <h4>Japan</h4>
+                    <p>6+ Locations</p>
+                </div>
+                <div class="location-card">
+                    <h4>Singapore</h4>
+                    <p>4+ Locations</p>
+                </div>
+                <div class="location-card">
+                    <h4>Australia</h4>
+                    <p>7+ Locations</p>
+                </div>
+                <div class="location-card">
+                    <h4>Canada</h4>
+                    <p>10+ Locations</p>
+                </div>
+                <div class="location-card">
+                    <h4>Netherlands</h4>
+                    <p>6+ Locations</p>
+                </div>
+                <div class="location-card">
+                    <h4>France</h4>
+                    <p>5+ Locations</p>
+                </div>
+                <div class="location-card">
+                    <h4>Brazil</h4>
+                    <p>4+ Locations</p>
+                </div>
+                <div class="location-card">
+                    <h4>India</h4>
+                    <p>8+ Locations</p>
+                </div>
+                <div class="location-card">
+                    <h4>South Korea</h4>
+                    <p>3+ Locations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Download VPN Tool</h2>
+                <p>Choose your platform and start protecting your online privacy</p>
+            </div>
+            <div class="download-options">
+                <div class="download-card">
+                    <i class="fab fa-windows" style="font-size: 3rem; color: #2563eb; margin-bottom: 1rem;"></i>
+                    <h3>Windows</h3>
+                    <p>Compatible with Windows 10/11 and Server editions</p>
+                    <a href="#" class="download-btn">Download for Windows</a>
+                </div>
+                <div class="download-card">
+                    <i class="fab fa-apple" style="font-size: 3rem; color: #2563eb; margin-bottom: 1rem;"></i>
+                    <h3>macOS</h3>
+                    <p>Native app for macOS 10.15 and later</p>
+                    <a href="#" class="download-btn">Download for macOS</a>
+                </div>
+                <div class="download-card">
+                    <i class="fab fa-linux" style="font-size: 3rem; color: #2563eb; margin-bottom: 1rem;"></i>
+                    <h3>Linux</h3>
+                    <p>Available for Ubuntu, CentOS, and other distributions</p>
+                    <a href="#" class="download-btn">Download for Linux</a>
+                </div>
+                <div class="download-card">
+                    <i class="fas fa-mobile-alt" style="font-size: 3rem; color: #2563eb; margin-bottom: 1rem;"></i>
+                    <h3>Mobile Apps</h3>
+                    <p>iOS and Android apps for mobile VPN access</p>
+                    <a href="#" class="download-btn">Download Mobile Apps</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GVSystems</h3>
+                    <p>Your trusted partner for IT infrastructure management and custom software development.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#services">Server Management</a></li>
+                        <li><a href="index.html#services">Email Hosting</a></li>
+                        <li><a href="index.html#services">Custom Development</a></li>
+                        <li><a href="index.html#services">Remote Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Apps</h4>
+                    <ul>
+                        <li><a href="remote-desktop.html">Remote Desktop</a></li>
+                        <li><a href="vpn-tool.html">VPN Tool</a></li>
+                        <li><a href="file-sharing.html">File Sharing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Bangalore, Karnataka</p>
+                    <p>+91 80 1234 5678</p>
+                    <p>info@gvsystems.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GVSystems Pvt Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

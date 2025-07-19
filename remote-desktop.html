@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Desktop Support - GVSystems</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .app-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .app-features {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #2563eb, #3b82f6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .feature-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .download-section {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .download-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .download-card {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .download-card:hover {
+            border-color: #2563eb;
+            transform: translateY(-5px);
+        }
+        
+        .download-card h3 {
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+        
+        .download-btn {
+            background: #2563eb;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+        
+        .screenshot-section {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+        
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .screenshot {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .screenshot img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-size: 3rem;
+        }
+        
+        .screenshot-content {
+            padding: 1.5rem;
+        }
+        
+        .screenshot-content h4 {
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+        
+        .screenshot-content p {
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>GVSystems</h2>
+                <span>Pvt Ltd</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#services" class="nav-link">Services</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Apps <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="remote-desktop.html">Remote Desktop</a></li>
+                        <li><a href="vpn-tool.html">VPN Tool</a></li>
+                        <li><a href="file-sharing.html">File Sharing</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- App Hero Section -->
+    <section class="app-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1><i class="fas fa-desktop"></i> Remote Desktop Support</h1>
+                <p>Secure, fast, and reliable remote desktop solution for IT professionals and businesses. Access and control computers remotely with enterprise-grade security.</p>
+                <div class="hero-buttons">
+                    <a href="#download" class="btn btn-primary">Download Now</a>
+                    <a href="#features" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="app-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Key Features</h2>
+                <p>Professional remote desktop solution with advanced capabilities</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Enterprise Security</h3>
+                    <p>End-to-end encryption with AES-256, two-factor authentication, and secure tunneling protocols to protect your remote sessions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>High Performance</h3>
+                    <p>Optimized for speed with hardware acceleration, adaptive quality settings, and low-latency connections for smooth remote access.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Multi-User Support</h3>
+                    <p>Support multiple simultaneous connections with role-based access control and session management for teams.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Cross-Platform</h3>
+                    <p>Works on Windows, macOS, Linux, iOS, and Android devices with native apps for each platform.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Session Recording</h3>
+                    <p>Record remote sessions for training, compliance, and troubleshooting purposes with detailed logs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Advanced Controls</h3>
+                    <p>File transfer, clipboard sharing, printer redirection, and custom keyboard shortcuts for enhanced productivity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshot-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Application Screenshots</h2>
+                <p>See our remote desktop solution in action</p>
+            </div>
+            <div class="screenshot-grid">
+                <div class="screenshot">
+                    <div class="screenshot-img">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="screenshot-content">
+                        <h4>Main Dashboard</h4>
+                        <p>Clean and intuitive interface for managing remote connections and sessions.</p>
+                    </div>
+                </div>
+                <div class="screenshot">
+                    <div class="screenshot-img">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="screenshot-content">
+                        <h4>Security Settings</h4>
+                        <p>Advanced security configuration with encryption and authentication options.</p>
+                    </div>
+                </div>
+                <div class="screenshot">
+                    <div class="screenshot-img">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="screenshot-content">
+                        <h4>Performance Monitor</h4>
+                        <p>Real-time monitoring of connection quality and system performance.</p>
+                    </div>
+                </div>
+                <div class="screenshot">
+                    <div class="screenshot-img">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="screenshot-content">
+                        <h4>Session Logs</h4>
+                        <p>Detailed logs and reports for compliance and troubleshooting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Download Remote Desktop</h2>
+                <p>Choose your platform and start using our secure remote desktop solution</p>
+            </div>
+            <div class="download-options">
+                <div class="download-card">
+                    <i class="fab fa-windows" style="font-size: 3rem; color: #2563eb; margin-bottom: 1rem;"></i>
+                    <h3>Windows</h3>
+                    <p>Compatible with Windows 10/11 and Server editions</p>
+                    <a href="#" class="download-btn">Download for Windows</a>
+                </div>
+                <div class="download-card">
+                    <i class="fab fa-apple" style="font-size: 3rem; color: #2563eb; margin-bottom: 1rem;"></i>
+                    <h3>macOS</h3>
+                    <p>Native app for macOS 10.15 and later</p>
+                    <a href="#" class="download-btn">Download for macOS</a>
+                </div>
+                <div class="download-card">
+                    <i class="fab fa-linux" style="font-size: 3rem; color: #2563eb; margin-bottom: 1rem;"></i>
+                    <h3>Linux</h3>
+                    <p>Available for Ubuntu, CentOS, and other distributions</p>
+                    <a href="#" class="download-btn">Download for Linux</a>
+                </div>
+                <div class="download-card">
+                    <i class="fas fa-mobile-alt" style="font-size: 3rem; color: #2563eb; margin-bottom: 1rem;"></i>
+                    <h3>Mobile Apps</h3>
+                    <p>iOS and Android apps for mobile remote access</p>
+                    <a href="#" class="download-btn">Download Mobile Apps</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GVSystems</h3>
+                    <p>Your trusted partner for IT infrastructure management and custom software development.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#services">Server Management</a></li>
+                        <li><a href="index.html#services">Email Hosting</a></li>
+                        <li><a href="index.html#services">Custom Development</a></li>
+                        <li><a href="index.html#services">Remote Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Apps</h4>
+                    <ul>
+                        <li><a href="remote-desktop.html">Remote Desktop</a></li>
+                        <li><a href="vpn-tool.html">VPN Tool</a></li>
+                        <li><a href="file-sharing.html">File Sharing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Bangalore, Karnataka</p>
+                    <p>+91 80 1234 5678</p>
+                    <p>info@gvsystems.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GVSystems Pvt Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
